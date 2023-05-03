@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+//my variables
+$background-color: #3c5077;
+$button-color: #38f032;
+$box-shadow: #b415c9;
+$hover-bg:#f725a6;
+$color:#fff;
+
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background: $background-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .btn{
+        background-color: $button-color;
+        padding: 8px 20px;
+    border-radius: 15px;
+    margin-top: 15px;
+    cursor: pointer;
+    font-size: 22px;
+    color: $color;
+    font-weight: 500;
+    &:hover{
+        box-shadow: $box-shadow 5px 5px;
+        background-color: $hover-bg;
+    }
+}
+
+.popup{
+    width: 400px;
+    background: $color;
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.1);
+    text-align: center;
+    padding: 9px 30px 30px;
+    color: $hover-bg;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+
+    .tick{
+        width: 100px;
+        margin-top: -38px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    h2{
+        font-size: 38px;
+        font-weight: 500;
+        margin: 30px 0 10px;
+    }
+
+    button{
+    background-color: $button-color;
+    padding: 8px 20px;
+    border-radius: 15px;
+    margin-top: 50px;
+    cursor: pointer;
+    font-size: 18px;
+    color: $color;
+    font-weight: 500;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    }
+}
+}
+
+.open-popup{
+    top: 50% !important;
+    visibility: visible !important;
+    transform: translate(-50%,-50%) scale(1) !important;
+}
